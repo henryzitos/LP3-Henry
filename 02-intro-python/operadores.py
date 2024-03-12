@@ -6,9 +6,6 @@ nota3 = 7.5
 
 media = (nota1 + nota2 + nota3) / 3
 
-if media >= 6.0:
-    print("Aprovado")
-
 # potenciação 
 # n elevado a e | ex: 10 eleveado a 2
 n = 10
