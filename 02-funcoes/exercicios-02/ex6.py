@@ -8,7 +8,7 @@ def recolheNota():
     nota = float(input("Digite a nota em número (0 a 100): "))
     if (nota > 100 or nota < 0):
         while(nota > 100 or nota < 0):
-            nota = double(input("Digite uma nota em número válida! (0 a 100): "))
+            nota = float(input("Digite uma nota em número válida! (0 a 100): "))
     return nota
 
 def conversorDeNota(nota):

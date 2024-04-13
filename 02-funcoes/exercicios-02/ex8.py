@@ -6,21 +6,18 @@ vezes que cada palavra aparece no texto. Depois, teste a função com
 diferentes textos fornecidos pelo usuário.
 '''
 
-frase = input("Digite uma frase: ")
-print(frase)
-palavra = ""
-dicionario = {}
+def contar_palavras(frase):
+    dicionario = {}
+    palavras = frase.split()
+    
+    for palavra in palavras:
+        if palavra in dicionario:
+            dicionario[palavra] += 1
+        else:
+            dicionario[palavra] = 1
+    
+    return dicionario
 
-for letra in frase:
-    if letra.isalpha() == False:
-        for key in dicionario:
-            if key == palavra:
-                print("Palavra repetida.")
-                print(palavra)
-            else:
-                print(palavra)
-                print("Adicionando palavra ao dicionario")
-        palavra = ""
-    elif letra.isalpha():
-        palavra = palavra + letra
-        print(palavra)
+frase = input("Digite uma frase: ")
+resultado = contar_palavras(frase)
+print(resultado)

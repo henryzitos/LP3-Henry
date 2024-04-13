@@ -7,6 +7,7 @@ tem um número limitado de tentativas para adivinhar toda a palavra.
 letraPorLetra = list()
 tamanhoDaPalavra = 0
 i = 0
+j = 0
 palavra = " "
 
 def gerencia_palavra():
@@ -49,6 +50,13 @@ def chute():
     global letrasDescobertas
     global i
     global tamanhoDaPalavra
+    global j
+
+    if j == 0:
+        print("Vamos começar o jogo!")
+        j += 1
+        exibe_as_letras()
+
     letraAdvinha = input("Digite a letra: ")
     letraAdvinha = letraAdvinha.capitalize()
         
